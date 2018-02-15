@@ -104,6 +104,21 @@ the_medium_to_display(word,35);
  int y = strlen(word);
  
 everything[no][count[no]] = (char*)malloc(y*sizeof(char));
+
+int i,stop=0;
+
+for(i=0;i<count[no];i++){
+
+if( strcmp(everything[no][i], word) ==0 ){
+stop=1;
+break;
+i=count[no];
+}
+
+}
+
+if(stop==0){
+
 int g;
 
  	for(g=0;g<y;g++){
@@ -116,7 +131,7 @@ int g;
 
 
  //printf(":\t%s\n", everything[no][count[no]-1]);
-
+}
 
 }
 
