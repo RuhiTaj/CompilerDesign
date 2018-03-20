@@ -1,0 +1,73 @@
+/*
+
+This is a Comment Line
+
+
+*/
+struct node;
+
+struct node{
+
+int a;
+double b;
+
+};
+
+int functionForVerification(){
+
+int y;
+for(y=0;y<100;y++){
+
+int g;
+
+}
+
+
+}
+
+
+
+
+//Type Mismatch
+//Scope
+//Undefined
+//return in function
+//array size
+
+
+int main(){
+
+int al,bl,c_check;
+float c,d;
+int f;
+struct node* link;
+char a[20] = "Iam A String" ;
+if(ad==0){
+
+int check;
+printf("Okay");
+
+if(check == 0){
+
+int y;
+y = c + zx;
+}
+
+
+}
+
+
+printf("Hey\n");
+f = c + d;
+
+}
+
+
+
+void yuh(){
+
+return 1;
+
+}
+
+
