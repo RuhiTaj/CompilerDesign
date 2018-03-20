@@ -1,0 +1,37 @@
+#include <stdlib.h>
+
+/*
+
+This is a comment
+
+*/
+
+//Struct pointers
+// g is not accepted, because it's outside Scope
+//pointers
+
+struct node;
+
+
+int main(){
+
+int a;
+float b;
+
+int * gli;
+struct node* link;
+
+printf("The code\n");
+
+if(a==4){
+
+int g;
+
+
+}
+
+
+ g=6;
+
+
+}

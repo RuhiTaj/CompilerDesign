@@ -1,0 +1,40 @@
+#include <stdlib.h>
+
+
+//Global Varible Acceptance
+// Other function defined varibale rejection
+//hierarchy of variables
+
+int k,l;
+
+int checkFunc(){
+
+int a, b;
+
+}
+
+
+int main(){
+
+a = 7+7;
+
+if(a==14){
+
+int b;
+
+if(b==0){
+
+int c;
+
+if(c==0){
+int d;
+}
+
+}
+
+}
+
+b = 9;
+l= 80;
+
+}
