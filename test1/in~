@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+
+int a;
+char b;
+
+a= 9.0;
+a = b;
+a = b + a;
+
+}
