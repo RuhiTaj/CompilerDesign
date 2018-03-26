@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int g;
+
+
+int main(){
+
+int a;
+char a;
+
+if(int a){
+
+}
+
+}
+
