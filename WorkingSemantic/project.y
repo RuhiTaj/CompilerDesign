@@ -7,22 +7,36 @@
 	int yylex(void);
 	int yyerror(const char *s);
 	int success = 1;
-	void check(int a, int b){
+	int check(int a, int b){
 	if(a==3 || b == 3){
 	printf("Semantic error at line no\t-\t%d\n",yylineno);
-	printf("Cannot add character type variables\n\n");
+	printf("Cannot operate on character type variables here\n\n");
 }
 	 else if(a!=b){
 	printf("Semantic error at line no\t-\t%d\n",yylineno);
-	printf("Cannot add different type variables\n\n");
+	printf("Cannot operate on different type variables\n\n");
 	}
+	else{
+	return 1;
+	}
+	return -1;
 	}
 	void checkAssign(int a, int b){
+
+	if(a <10 && b <10){
+		if(a!=b){
+			
+	printf("Semantic error at line no- %d\n",yylineno);
+	printf("Cannot assign different variables\n\n");
 	
+		}
+	}
+	else{
 	if(a== b-10){}
 	else{
 	printf("Semantic error at line no- %d\n",yylineno);
-	printf("Cannot assign different variables variables\n\n");
+	printf("Cannot assign different variables\n\n");
+	}
 	}
 	}
 %}
@@ -305,13 +319,13 @@ shift_expression			: additive_exp	{$$ = $1; }
 							| shift_expression shift_const additive_exp
 							;
 additive_exp				: mult_exp	{$$ = $1; }
-							| additive_exp '+' mult_exp {  check($1,$3);}
-							| additive_exp '-' mult_exp { check($1,$3);}
+							| additive_exp '+' mult_exp {int typeC =  check($1,$3);$$ = $1;}
+							| additive_exp '-' mult_exp { int typeC =  check($1,$3); $$ = $1;}
 							;
 mult_exp					: cast_exp {$$ = $1; }
-							| mult_exp '*' cast_exp
-							| mult_exp '/' cast_exp
-							| mult_exp '%' cast_exp
+							| mult_exp '*' cast_exp{int typeC = check($1,$3); $$ = $1; }
+							| mult_exp '/' cast_exp{int typeC = check($1,$3); $$ = $1;}
+							| mult_exp '%' cast_exp{int typeC = check($1,$3); $$ = $1;}
 							;
 cast_exp					: unary_exp {$$ = $1; }
 							| '(' type_name ')' cast_exp
@@ -376,6 +390,5 @@ int main()
 theTable();
     return 0;
 }
-
 
 
